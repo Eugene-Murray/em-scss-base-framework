@@ -4,3 +4,95 @@ $large: 6rem;
 $font-kenia: 'Kenia', cursive;
 
 
+
+
+// TODO: .........
+
+$font-main: 'proxima-nova', Arial, Helvetica;
+
+$font-size-menu: 20px;
+$font-size-smaller: 0.75rem;
+$font-size-small: 0.875rem;
+$font-size-base: 1rem;
+$font-size-base-plus: 1.125rem; // 18px
+$font-size-medium: 1.25rem;
+$font-size-larger: 1.5rem;
+$font-size-large: 1.625rem;
+$font-size-xl: 2rem;
+$font-size-xxl: 2.5rem;
+$font-size-xxl-plus: 3rem;
+
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-regular: 400;
+
+.light-font-weight {
+  font-weight: 300;
+}
+
+.regular-font-weight {
+  font-weight: $font-weight-regular;
+}
+
+.medium-font-weight {
+  font-weight: 500;
+}
+
+.bold-font-weight {
+  font-weight: $font-weight-bold;
+}
+
+.extrabold-font-weight {
+  font-weight: 800;
+}
+
+.smaller-font-size {
+  //12px
+  font-size: $font-size-smaller !important;
+  line-height: 1em;
+}
+
+.small-font-size {
+  //14px
+  font-size: $font-size-small !important;
+  line-height: 1em;
+}
+
+.base-font-size {
+  //16px
+  font-size: $font-size-base !important;
+}
+
+.regular-font-size {
+  //18px
+  font-size: 1.125rem !important;
+  line-height: 1.75rem;
+}
+
+.big-font-size {
+  font-size: $font-size-larger !important;
+  line-height: 1.1em;
+}
+
+.bigger-font-size {
+  font-size: 1.375rem !important;
+  line-height: 1em;
+}
+
+.generous-font-size {
+  font-size: $font-size-large !important;
+  line-height: 1.875rem;
+}
+
+.large-font-size {
+  font-size: 1.875rem !important;
+  line-height: 1em;
+}
+
+.larger-font-size {
+  font-size: 2.5rem !important;
+  line-height: 1em;
+}
+
+
+

@@ -1,0 +1,198 @@
+@import './colors';
+@import './fonts';
+@import './variables';
+
+@mixin aunderline(
+  $color,
+  $bottom-space: 0,
+  $line-height: 1em,
+  $underline-height: 0.25rem
+) {
+  position: relative;
+  padding-bottom: $bottom-space;
+  line-height: $line-height;
+  @extend %transition-default;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: $underline-height;
+    bottom: 0;
+    left: 0;
+    background-color: $color;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    @extend %transition-default;
+  }
+
+  &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+@mixin bg_linear_gradient($start, $end) {
+  /* IE10+ */
+  background-image: -ms-linear-gradient(top, $start 0%, $end 30%);
+
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, $start 0%, $end 30%);
+
+  /* Opera */
+  background-image: -o-linear-gradient(top, $start 0%, $end 30%);
+
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, $start),
+    color-stop(30, $end)
+  );
+
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, $start 0%, $end 30%);
+
+  /* W3C Markup */
+  background-image: linear-gradient(to bottom, $start 0%, $end 30%);
+}
+
+@mixin breakpoint($point) {
+  @if ($point == lg) {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if ($point == md) {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if ($point == sm) {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $point) {
+      @content;
+    }
+  }
+}
+@mixin breakpoint-only($point) {
+  @if ($point == xxl) {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  } @else if ($point == xl) {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  } @else if ($point == lg) {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if ($point == mobile) {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if ($point == laptop) {
+    @media (max-width: 1100px) {
+      @content;
+    }
+  } @else if ($point == tablet) {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if ($point == md) {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if ($point == sm) {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if ($point == xs) {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if ($point == xxs) {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if ($point == extrasmall) {
+    @media (max-width: 380px) {
+      @content;
+    }
+  } @else if ($point == landscape) {
+    @media only screen and (max-device-width: 991px) and (orientation: landscape) {
+      @content;
+    }
+  } @else if ($point == maincontent) {
+    @media (max-width: 58.75rem) {
+      @content;
+    }
+  }
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+
+// Font Asesome - SCSS
+// https://fontawesome.com/v6/docs/web/use-with/scss
+// Font Awesome - pseudo-elements
+// https://fontawesome.com/v6/docs/web/add-icons/pseudo-elements
+@mixin font-awesome-base($icon, $color, $font-size) {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: $icon;
+  color: $color;
+  font-size: $font-size;
+}
+
+// Included in Free Font Awesome
+@mixin font-awesome-solid($icon, $color, $font-size) {
+  font: var(--fa-font-solid);
+  @include font-awesome-base($icon, $color, $font-size);
+}
+
+// Included in Free Font Awesome
+@mixin font-awesome-brands($icon, $color, $font-size) {
+  font: var(--fa-font-brands);
+  @include font-awesome($icon, $color, $font-size);
+}
+
+// Included in Pro Font Awesome
+@mixin font-awesome-regular($icon, $color, $font-size) {
+  font: var(--fa-font-regular);
+  @include font-awesome-base($icon, $color, $font-size);
+}
+
+// Included in Pro Font Awesome
+@mixin font-awesome-light($icon, $color, $font-size) {
+  font: var(--fa-font-light);
+  @include font-awesome-base($icon, $color, $font-size);
+}
+
+// Included in Pro Font Awesome
+@mixin font-awesome-thin($icon, $color, $font-size) {
+  font: var(--fa-font-thin);
+  @include font-awesome-base($icon, $color, $font-size);
+}
+
+// Included in Pro Font Awesome
+@mixin font-awesome-duotone($icon, $color, $font-size) {
+  font: var(--fa-font-duotone);
+  @include font-awesome-base($icon, $color, $font-size);
+}

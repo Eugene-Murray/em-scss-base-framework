@@ -48,7 +48,93 @@ $foreground: $black;
 
 $border: $gray-light;
 
-
-
-
 $shadow: rgba(0, 0, 0, .1);
+
+// TODO: ....
+
+
+// Primary colors
+$color-white: rgba(255, 255, 255, 1);
+$color-black: rgba(0, 0, 0, 1);
+$color-primary: #001eff;
+$color-secondary: rgba(22, 32, 44, 1);
+
+// Error & Messaging
+$color-success: #187b52;
+$color-warning: rgba(255, 168, 0, 1);
+$color-danger: rgba(230, 20, 20, 1);
+$color-promo: rgba(163, 131, 67, 1);
+
+// Tones of main colors
+$color-white-400: $color-white;
+
+$color-black-400: $color-black;
+
+$color-primary-400: $color-primary;
+$color-primary-300: #2384ce;
+$color-primary-200: lighten($color-primary, 20%);
+$color-primary-100: lighten($color-primary, 40%);
+$color-primary-50: #ddeaf5;
+
+$color-secondary-blue-300: #00118f;
+$color-secondary-blue-200: #0015b8;
+$color-secondary-blue-80: #ebf6ff;
+
+$color-secondary-400: $color-secondary;
+
+$color-gray-700: #3d3d3d;
+$color-gray-600: #666666;
+$color-gray-400: #aaaeb2;
+$color-gray-200: #e0e0e0;
+$color-gray-150: #f0f0f0;
+$color-gray-100: #f5f5f5;
+$color-gray-90: #4e5056;
+$color-gray-60: #fcfcfc;
+
+// Tones of message colors
+$color-success-400: $color-success;
+
+$color-warning-400: $color-warning;
+
+$color-danger-400: $color-danger;
+
+$color-promo-400: $color-promo;
+
+// Mapping
+$color-main-text: $color-black;
+$color-main-background: $color-white;
+$color-main-foreground: $color-gray-400;
+
+$color-orange: #ee7a2d;
+$color-purple: #94769d;
+$color-pink: #fde8ea;
+$color-brown: #807372;
+$color-dark-green: #05a4a8;
+
+$color-grey-400: #545d59;
+$color-grey-300: #5a6872;
+
+$color-blue-600: #16202c;
+$color-blue-500: #1d3a4c;
+$color-blue-400: #305c74;
+$color-blue: #5aaafa;
+$color-blue-300: #6a88aa;
+$color-blue-200: #aedcff;
+$color-blue-80: #ebf6ff;
+
+//Mapping Reuters news feed only
+$color-teal: #39c69c;
+$color-mauve: #472574;
+$color-yellow: #ffde66;
+
+//dark theme
+$color-dark-text: $color-white;
+$color-dark-background: $color-black;
+
+//continent colors
+$color-europe: #010b55;
+$color-asia: #0115aa;
+$color-africa: #0220ff;
+$color-oceania: #576aff;
+$color-south-america: #aab5ff;
+

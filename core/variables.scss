@@ -1,0 +1,39 @@
+$cta-hero-border: 1px solid;
+$cta-hero-border-radius: 3px;
+$nav-top-offset: -90px;
+$nav-height: 90px;
+
+%transition-default {
+  transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+}
+
+%rotate-360 {
+  transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -ms-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+}
+
+$screen-xxs-min: 416px;
+$screen-xs-min: 600px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+$screen-xxl-min: 1920px;
+
+// new breakpoints
+$lseg-screen-mobile: 375px;
+$lseg-screen-tablet: 768px;
+$lseg-screen-laptop: 1200px;
+$lseg-screen-desktop: 1850px;
+
+$padding: 1rem;
+
+$close-btn-size: 20px;
+$close-btn-width: 20px;
+$close-btn-height: 2px;
+$underline-height: 0.25rem;

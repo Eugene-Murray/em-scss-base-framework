@@ -1,0 +1,58 @@
+@import 'variables';
+
+$breakpoints: (
+  'mobile': $lseg-screen-mobile,
+  'tablet': $lseg-screen-tablet,
+  'laptop': $lseg-screen-laptop,
+  'desktop': $lseg-screen-desktop,
+);
+
+@mixin media-screen-mobile {
+  @media screen and (max-width: calc($lseg-screen-tablet - 1px)) {
+    @content;
+  }
+}
+
+@mixin media-screen-mobile-and-below {
+  @media screen and (max-width: calc($lseg-screen-mobile - 1px)) {
+    @content;
+  }
+}
+
+@mixin media-screen-tablet-and-below {
+  @media screen and (max-width: calc($lseg-screen-laptop - 1px)) {
+    @content;
+  }
+}
+
+@mixin media-screen-tablet {
+  @media screen and (min-width: ($lseg-screen-mobile + 1px)) and (max-width: ($lseg-screen-laptop - 1px)) {
+    @content;
+  }
+}
+
+@mixin media-screen-laptop-and-below {
+  @media screen and (max-width: calc($lseg-screen-desktop - 1px)) {
+    @content;
+  }
+}
+
+@mixin media-screen-laptop-and-above {
+  @media screen and (min-width: calc($lseg-screen-laptop + 1px)) {
+    @content;
+  }
+}
+
+@each $key, $value in $breakpoints {
+  .hide-below-#{$key} {
+    @media screen and (max-width: calc($value - 1px)) {
+      display: none;
+    }
+  }
+
+  .hide-above-#{$key} {
+    @media screen and (min-width: $value) {
+      display: none;
+    }
+  }
+}
