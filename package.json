@@ -1,6 +1,6 @@
 {
   "name": "em-scss-base-framework",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "SCSS base framework for responsive design",
   "main": "base.scss",
   "repository": {

@@ -1,5 +1,8 @@
+@import './colors';
+
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 15px;
     margin: 20px;
+    border: 1px solid $color-gray-400;
+    background-color: $color-gray-200;
 }
